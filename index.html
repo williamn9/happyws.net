@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<title>開心畫室 Happy Workshop</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4 {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+  background-image: url('img/corridor.jpeg');
+  min-height: 100%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+  background-image: url("img/exercise.jpeg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+  background-image: url("img/shelf.jpeg");
+  min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-4 {
+  background-image: url("img/tree.jpeg");
+  min-height: 400px;
+}
+
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1600px) {
+  .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+  }
+}
+</style>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">回到頁頂</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> 關於我們</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> 學生作品</a>
+    <a href="#timeTable" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> 課堂時間表</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> 聯絡我們</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">關於我們</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">學生作品</a>
+    <a href="#timeTable" class="w3-bar-item w3-button" onclick="toggleFunction()">課堂時間表</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">聯絡我們</a>
+    <a href="#" class="w3-bar-item w3-button">搜尋</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-white w3-xxlarge w3-wide w3-animate-opacity"> 開心畫室 </span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">關於我們</h3>
+  <p class="w3-center"><em>開心的畫室
+</em></p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="img/oilPaint.jpeg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>開心畫室於2000年成立，致力推廣兒童視覺藝術，提升個人藝術修養，建立自信，讓兒童得以全面發展，開心成長。</p>
+      <p>畫室佔地1000多呎，設備完善環境安全舒適，在一個寫意的環境空間，學員可以悠閒地享受繪畫樂趣。</p><p>課程種類多元化，學生可以選擇自己興趣知藝術課程參加，導師亦會因應不同小朋友的需要，提供適合之教導。</p><p>歡迎各團體、機構及私人活動合作，本課程可提供活動計劃，以及派員開辦各類型工作坊。</p>
+    </div>
+  </div>
+<!--
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide"><i class="fa fa-camera"></i>Photography</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+</div>
+-->
+
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">1000+</span><br>
+    平方呎
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">5+</span><br>
+    課堂種類
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">10000+</span><br>
+    位歷屆學生
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">21+</span><br>
+    年教學經驗
+  </div>
+</div>
+
+
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">室內環境</h3>
+  <p class="w3-center"><em>點擊放大</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="img/bookshelf.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/roomB.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/shelf.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="img/oilPaint.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="img/open.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+    </div>
+
+
+<!--
+    <div class="w3-col m3">
+      <img src="img/duck.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+    </div>
+-->
+    <div class="w3-col m3">
+      <img src="img/fashsion.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+    </div>
+
+
+    <div class="w3-col m3">
+      <img src="img/tree.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="portfolio">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">學生作品</span>
+  </div>
+</div>
+
+
+
+
+
+    
+ <!--
+    <h3 class="w3-center">學生作品</h3>
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_bird.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_bun.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_catPrince.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="img/studentWork/studentWork_spongeBob.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+        </div>
+      </div>
+ 
+
+
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_cookie.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="img/studentWork/studentWork_plane.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+
+        </div>
+
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_dolphin.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+        </div>
+
+        <div class="w3-col m3">
+          <img src="img/studentWork/studentWork_pig.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+        </div>
+      </div>
+ -->
+ 
+ 
+ 
+
+ <div class="w3-content w3-container w3-padding-64" >
+     
+ <h3 class="w3-center">兒童綜合藝術班</h3>
+ <div class="w3-row-padding w3-center">
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/01.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/02.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/03.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/04.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+ </div>
+ 
+ <div class="w3-row-padding w3-center w3-section">
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/05.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/06.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/07.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/08.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+ </div>
+ 
+ <div class="w3-row-padding w3-center">
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/09.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/general/10.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="general">
+     </div>
+ </div>
+
+ <div class="w3-content w3-container w3-padding-64" >
+
+ <h3 class="w3-center">麵粉黏土公仔班</h3>
+ <div class="w3-row-padding w3-center">
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/01.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/02.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/03.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/04.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+ </div>
+ 
+ <div class="w3-row-padding w3-center w3-section">
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/05.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+     
+     <div class="w3-col m3">
+         <img src="img/studentWork/clay/06.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="clay">
+     </div>
+     
+ </div>
+ 
+ 
+ <div class="w3-content w3-container w3-padding-64" >
+
+ 
+    <h3 class="w3-center">素描/水彩畫班</h3>
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/01.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/02.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/03.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/04.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/05.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/06.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/07.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/08.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/09.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/10.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/11.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/12.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/13.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/14.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/15.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/sketch_watercolor/16.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="sketch watercolor">
+        </div>
+    </div>
+    
+    
+    
+    <div class="w3-content w3-container w3-padding-64" >
+
+    
+    <h3 class="w3-center">塑膠彩/油畫班</h3>
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/01.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/02.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/03.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/04.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/05.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/06.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/07.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/08.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+    </div>
+    
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/09.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/10.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/11.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+        
+        <div class="w3-col m3">
+            <img src="img/studentWork/acrylic_oil/12.JPG" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="acrylic oil">
+        </div>
+    </div>
+    
+    
+    
+
+    
+    
+</div>
+
+
+
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="timeTable">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">課堂時間表</span>
+  </div>
+</div>
+
+
+
+<div class="w3-content w3-container w3-padding-64" >
+  <h3 class="w3-center">課堂時間表</h3>
+  <img src="img/timeTable1.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"><br><br>
+  <img src="img/timeTable2.jpeg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+</div>
+
+
+
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">聯絡我們</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">我們的所在地</h3>
+  <p class="w3-center"><em>歡迎預約參觀</em></p>
+
+  <div class="w3-row w3-padding-32 w3-section">
+
+
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i>九龍太子道144號賜珍大廈2樓B室
+<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> phone: 92800815<br>
+        <i class="fa fa-whatsapp fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> whatsapp: 92800815<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> email: happyws.cherry@gmail.com<br>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7384.044820259763!2d114.169617!3d22.324474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400c996640b19%3A0xe2f40e37bfd5972!2sChue%20Jen%20Building%2C%20144%20Prince%20Edward%20Rd%20W%2C%20Prince%20Edward!5e0!3m2!1sen!2shk!4v1619351511916!5m2!1sen!2shk" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+  <!--    <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a note:</p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="w3-half">
+            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+          </div>
+        </div>
+        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+        <button class="w3-button w3-black w3-right w3-section" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </form>
+
+  -->
+    </div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>返回頂部</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/%E9%96%8B%E5%BF%83%E7%95%AB%E5%AE%A4-happy-workshop-138436642881343/?ref=page_internal" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+  </div>
+
+</footer>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
